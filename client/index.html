@@ -1,24 +1,7 @@
-<template name="ApplicationLayout">
-  <h1>Polinate</h1>
-
-  <article>
-    {{> yield}}
-  </article>
-
-  <footer>
-    {{> yield "footer"}}
-  </footer>
-</template>
-
 <template name="Index">
-  <head>
-    <title>Polinate</title>
-  </head>
-
   <body>
-    <h1>Polinate</h1>
     {{#each speech}}
-      <a href={{_id.str}}>{{title}} by: {{author}}</a>
+      <a href={{link}}>{{title}} by: {{author}}</a>
       <br>
     {{/each}}
     {{> loginButtons}}
