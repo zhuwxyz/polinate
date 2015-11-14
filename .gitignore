@@ -4,3 +4,8 @@
 *.swp
 *.swo
 .DS_Store
+client/lib/definitions
+client/lib/themes
+client/lib/.custom.semantic.json
+client/lib/semantic.less
+client/lib/theme.import.less
