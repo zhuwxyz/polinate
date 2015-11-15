@@ -34,3 +34,16 @@ Template.prescan.events({
      window.location = "/candidate/"+this.name;
   }
 });
+Template.Add.events({
+  'submit form': function(){
+     event.preventDefault();
+     var Name = event.target.author.value;
+     var title = event.target.title.value;
+     var text = event.target.text.value
+     Speeches.insert({
+       "author": Name,
+       "title": title,
+       "text": text
+     });
+  }
+});
