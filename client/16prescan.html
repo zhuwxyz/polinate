@@ -1,0 +1,33 @@
+<template name="prescan">
+<div class="ui special cards">
+  {{#each prescan}}
+  <div class="card">
+    <div class="blurring dimmable image">
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            <div class="ui inverted button">Search Speeches</div>
+          </div>
+        </div>
+      </div>
+      <img src={{pic}}>
+    </div>
+    <div class="content">
+      <a class="header"> {{Name}}</a>
+      <div class="meta">
+        <a>{{Party}} </a>
+      </div>
+      <div class="description">
+          {{description}}
+      </div>
+    </div>
+    <div class="extra content"> {{numspeech}}</div>
+    </div>
+  {{/each}}
+</div>
+<script>
+  $( document ).ready(function() {
+    $('.special.cards .image').dimmer({on: 'hover'});
+  });
+</script>
+</template>

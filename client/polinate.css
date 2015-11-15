@@ -1,3 +1,7 @@
 .current-annotate {
     background-color: yellow;
 }
+
+body {
+    padding:5px;
+}
