@@ -23,3 +23,6 @@ accounts-password
 accounts-ui
 semantic:ui-css
 sewdn:rangy
+accounts-google
+accounts-facebook
+accounts-twitter

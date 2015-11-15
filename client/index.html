@@ -1,13 +1,26 @@
 <template name="Index">
+  <div class="ui text container" background-color="Blue">
+      <h1 class="ui header">
+        Polinate
+      </h1>
+      <h2>Keep Politicians Accountable</h2>
+      <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
+    </div>
   <body>
-      <div class="ui list">
+      <div class="ui vertical stripe segment">
+      <div class = "ui middle aligned stackable grid container">
       {{#each speech}}
-      <div class="item">
-        <a href={{link}}><div class="header">{{title}}</div>
+        <div class="row">
+	    <div class="eight wide column">  
+        <a href={{link}}><h3 class="ui header">{{title}}</h3>
         by: {{author}}
         </a>
-      </div>
+        <p>{{text}}</p>
+        </div>
+       </div>
       {{/each}}
-    </div>
+   </div> 
+   </div>
   </body>
+
 </template>

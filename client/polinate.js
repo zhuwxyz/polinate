@@ -31,6 +31,6 @@ Template.prescan.helpers({
 });
 Template.prescan.events({
   'click .card': function(){
-     window.location = "/";
+     window.location = "/candidate/"+this.name;
   }
 });

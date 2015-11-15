@@ -1,7 +1,5 @@
 <template name="ApplicationLayout">
-  <div class="ui sticky">
-      <div class="ui equal width borderless inverted sticky main menu">                                                                         
-         <div class = "ui text container">  
+   <div class="ui borderless inverted main menu">                                                                         
            <div class="header item"> Polinate</div>                                                           
            <a class="item" href="/">Home</a>
            <a class="item" href="/about/">About</a> |                                                         
@@ -9,15 +7,17 @@
            <a class="item" href="/js/">Graphs</a> |                                                           
            <a class="item" href="/jquery/">etc</a>                                                            
            <a class="item"> {{> loginButtons}}</a>
-         </div>
     <script>                                                                                                    
       $(document)                                                                                                 
         .ready(function() {                                                                                       
           // fix main menu to page on passing                                                                     
-        $('.ui.sticky').sticky();                                                                                  
+        $('.main.menu').visibility({                                                                            
+          type: 'fixed'
+          offset: 80                                                                                     
+        });                                                                                                     
       })                                                                                                        
     ;                                                                                                           
     </script>      
-  </div></div>                                                                                          
+   </div>                                                                                          
    {{> yield}}
 </template>
