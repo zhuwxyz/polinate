@@ -73,6 +73,7 @@ routepolicy@1.0.6
 semantic:ui-css@2.1.2
 service-configuration@1.0.5
 session@1.1.1
+sewdn:rangy@1.3.0_2
 sha@1.0.4
 spacebars@1.0.7
 spacebars-compiler@1.0.7

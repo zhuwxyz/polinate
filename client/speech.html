@@ -1,3 +1,31 @@
 <template name="Speech">
-  <p>{{text}}</p>
+  <p id="speech">{{text}}</p>
+  annotation: <input type="text" name="annotation"><br>
+  <button class="annotation-submit">hi</button>
+  <script>
+    $( document ).ready(function() {
+      // highlighter for current selection
+
+      $('#speech').mouseup(function (e) {
+        var sel = rangy.getSelection();
+        sel.expand("word");
+
+        // TODO figure out if we actualy need to make highlights non-exclusive
+        // currentHighlighter.removeAllHighlights();
+        // currentSelection = sel;
+        // currentHighlighter.highlightSelection('current-annotate', { selection: currentSelection });
+
+        if (sel.toString().length > 4 && sel.toString().length < 400) {
+          // set some 'annotate' button to visible
+        } else {
+          // set some 'annotate' button to invisible
+        }
+      });
+
+      $('.annotation-submit').click(function(e) {
+        var sel = rangy.getSelection();
+        jQuery.post('/add-annotation', { selection: rangy.serializeSelection(sel), annotation: $('[name="annotation"]').val() });
+      });
+    });
+  </script>
 </template>
