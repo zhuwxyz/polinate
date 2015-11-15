@@ -1,9 +1,14 @@
 <template name="Index">
   <body>
-    {{#each speech}}
-      <a href={{link}}>{{title}} by: {{author}}</a>
-      <br>
-    {{/each}}
+    <div class="ui list">
+      {{#each speech}}
+      <div class="item">
+        <a href={{link}}><div class="header">{{title}}</div>
+        by: {{author}}
+        </a>
+      </div>
+      {{/each}}
+    </div>
     {{> loginButtons}}
   </body>
 </template>
