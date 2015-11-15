@@ -23,6 +23,14 @@ Template.prescan.helpers({
     return this.Party
   },
   Partypic: function(){
-    return "/" + this._Party;
+    return "/" + this.Party;
+  },
+  description: function(){
+    return this.description;
+  },
+});
+Template.prescan.events({
+  'click .card': function(){
+     window.location = "/";
   }
 });
