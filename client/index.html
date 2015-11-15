@@ -1,17 +1,13 @@
 <template name="Index">
-  <header>
-       <div id="menu">
-        <h1> Polinate </h1>
-       </div>
-  </header>
-  <nav>
-    <a href="/html/">About</a> |
-    <a href="/css/">Speeches</a> |
-    <a href="/js/">Graphs</a> |
-    <a href="/jquery/">etc</a>
-  </nav>
   <body>
-     <div class="ui list">
+       <div class="ui inverted menu">
+           <div class="header item"> Polinate</div>
+           <a class="item" href="/about/">About</a> |
+           <a class="item" href="/css/">Speeches</a> |
+           <a class="item" href="/js/">Graphs</a> |
+           <a class="item" href="/jquery/">etc</a>
+      </div>
+      <div class="ui list">
       {{#each speech}}
       <div class="item">
         <a href={{link}}><div class="header">{{title}}</div>
