@@ -5,6 +5,16 @@
 body {
     padding:5px;
 }
+.main.menu {
+    margin-top: 4em;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    transition:
+      box-shadow 0.5s ease,
+      padding 0.5s ease
+    ;
+}
 .masthead.container{
   background-image: url(/flag.jpg);
 }
